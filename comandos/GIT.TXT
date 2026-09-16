@@ -1,0 +1,56 @@
+git init  
+git add .
+git commit -m "Primer commit"
+git branch -M main
+git remote add origin https://github.com/TU-USUARIO/TU-REPOSITORIO.git 
+git push -u origin main
+
+
+9. para combinar las ramas
+   git merge nomre-rama-secundadira
+
+10. Para integrar cambios ,primero nos posisionamos en la rama secundaria
+    git switch master
+    git merge nombre-rama-fucionar
+
+
+11. Si fusionamos por error y nos queremos devolver
+    git reset --hard hash-anterior-al-merge
+
+
+12. Merge conflict, ocurre cuando dos ramas modifican la msima linea de codigo. Git inserta un merge conlifct, usamos la herramienta "Resolve in merge editor"
+    1. Accept current change
+    2. Accept incomming change
+    3. Accept both change
+    4. Nothing
+
+    git add archivo-resuelto-en-merge
+    git merge --continue
+
+
+13. Archivo .gitignore obligatorio siempre se tiene que llamar así
+    Este archivo hace que se ignoren carpetas o documentos en el repositorio
+
+    #Ejeplos de reglas
+    *.txt          ignora todos los archivos tipo txt
+    !nombre.txt     Excepcion: no ignora este archivo
+    nombre-carpeta/     Ignora una carpeta entera y su contenido
+    python*.py       ignora todos los archivos que comiencen con la palabra python
+
+
+14. Si añadí un archivo por error como lo ignoro
+    git rm --cached nombre-archivo
+
+
+GITHUB
+1. Crear un repositorio
+2. conectar el repositorio
+    git remote add origin link-del-repositorio
+3. Renombrar la rama para que se llamen igual
+    git branch -M main
+4. Hacer el primer push
+    git push -u origin main
+5. Para verificar si estan conectados a la rama
+    git remote -v
+6. Si voy a cambiar de ruta
+    git remote remove origin

@@ -4,3 +4,14 @@ git commit -m "Primer commit"
 git branch -M main
 git remote add origin https://github.com/TU-USUARIO/TU-REPOSITORIO.git 
 git push -u origin main
+
+
+9. para combinar las ramas
+   git merge nomre-rama-secundadira
+
+10. Para integrar cambios ,primero nos posisionamos en la rama secundaria
+    git switch master
+    git merge nombre-rama-fucionar
+
+11.si fucionamos por error y nos queremos devolver
+    git reset --hard hash-anterior-al-merge
